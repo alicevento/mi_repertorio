@@ -109,6 +109,12 @@
   }
 
   function nuevaCancion() {
+     // Verificar si los campos están vacíos
+     if (!cancionInput.value || !artistaInput.value || !tonoInput.value) {
+        alert("Por favor, complete todos los campos antes de agregar la canción.");
+        return; // Detener la ejecución si algún campo está vacío
+    }
+    // Crear un objeto con los datos de la canción
     let data = {
       titulo: cancionInput.value,
       artista: artistaInput.value,
